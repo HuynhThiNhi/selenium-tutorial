@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Test" parallel="classes" thread-count="4">
+    <groups>
+        <run>
+            <include name="smoke">Smoke test</include>
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="listener.ListenerEx"/>
+    </listeners>
+    <test name="Login">
+        <classes>
+            <class name="test.auth.SSOLogin"/>
+            <class name="test.auth.NormalLogin"/>
+            <class name="test.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Management task">
+        <classes>
+            <class name="test.task.TaskManagement"/>
+        </classes>
+    </test>
+</suite>

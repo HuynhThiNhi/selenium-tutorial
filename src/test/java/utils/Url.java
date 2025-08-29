@@ -13,7 +13,7 @@ public class Url {
     public static final String JSON_FILE = System.getProperty("user.dir") + "/resources/testing-urls.json";
     public static String currentTestUrl(String testPage) {
         ObjectMapper objectMapper = new ObjectMapper();
-        String finalUrl = "";
+        String finalUrl;
 
         try {
             FileInputStream fileInputStream = new FileInputStream(JSON_FILE);

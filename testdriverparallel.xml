@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Test" parallel="methods" thread-count="4">
+    <test name="Login">
+        <classes>
+            <class name="test.parallel.TestDriverInstances"/>
+        </classes>
+    </test>
+</suite>

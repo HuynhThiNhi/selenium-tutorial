@@ -82,5 +82,15 @@
     <inspection_tool class="UnnecessaryFinalOnLocalVariableOrParameter" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="UnqualifiedFieldAccess" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="UnqualifiedMethodAccess" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="groupsTestNG" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="groups">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="smoke" />
+            <item index="1" class="java.lang.String" itemvalue="regression" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
   </profile>
 </component>

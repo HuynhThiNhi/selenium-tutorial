@@ -29,7 +29,7 @@ public class LoginPage {
     }
 
     public LoginPage inputPassword(String userName) {
-        this.driver.findElement(this.userNameSelector).sendKeys(userName);
+        this.driver.findElement(this.passwordSelector).sendKeys(userName);
         return this;
     }
 

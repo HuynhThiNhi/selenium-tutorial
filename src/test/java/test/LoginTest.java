@@ -20,6 +20,8 @@ import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import utils.Url;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.Time;
 import java.time.Duration;
 
@@ -75,7 +77,6 @@ public class LoginTest extends DriverBase {
             loginPage.inputUsername(username)
                     .inputPassword(password)
                     .submit();
-            softAssert.assertEquals(1,2);
             new WebDriverWait(driver, Duration.ofSeconds(10))
                     .until(ExpectedConditions.urlToBe("https://the-internet.herokuapp.com/secure"));
 //            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));

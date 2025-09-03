@@ -1,7 +1,6 @@
 package utils;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import io.github.cdimascio.dotenv.Dotenv;
 import java.lang.reflect.Field;
 

@@ -26,7 +26,6 @@ import java.time.Duration;
 // purpose for running parallel
 public class LoginTest2  extends GridDriverBase {
 
-
     @Test( groups = {"smoke"})
     @Parameters("browser")
     public void loginWithCorrectCredential(String browser) throws MalformedURLException {

@@ -44,9 +44,13 @@ jobs:
         if: always()
         run: docker-compose -f docker-compose.yml down
 
-      - name: Publish JUnit Test Report
+      - name: Generate Allure Report
+        if: always()
+        run: mvn allure:report
+
+      - name: Upload Allure Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: junit-report
-          path: target/surefire-reports/*.xml
+          name: allure-report
+          path: target/site/allure-maven-plugin

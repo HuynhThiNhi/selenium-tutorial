@@ -43,13 +43,17 @@ jobs:
       - name: Stop Selenium Grid
         if: always()
         run: docker-compose -f docker-compose.yml down
+      - name: Install Allure CLI
+        run: |
+          wget https://github.com/allure-framework/allure2/releases/download/2.25.0/allure-2.25.0.tgz
+          tar -zxvf allure-2.25.0.tgz
+          sudo mv allure-2.25.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
 
       - name: Generate Allure Report
-        if: always()
-        run: mvn allure:report
+        run: allure generate allure-results --clean
 
       - name: Upload Allure Report
-        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
